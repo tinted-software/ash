@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+<<<<<<< HEAD
 - Added `push()` method to all root structs to insert a single extension-struct in the pointer chain. (#909)
 - Update Vulkan-Headers to 1.4.316 (#910, #951)
 - Added `VK_KHR_get_display_properties2` instance extension (#932)
@@ -37,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Removed unused lifetime from `vk::AllocationCallbacks` structure (#968)
 - Removed `ash::prelude` and `ash::vk::prelude` in favour of capturing all contents directly in their parent module. (#972)
+- Added `VK_EXT_display_control` display extension (#934)
 
 ## [0.38.0] - 2024-04-01
 
