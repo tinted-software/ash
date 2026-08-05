@@ -137,7 +137,9 @@ impl Entry {
     /// may be called after it is [dropped][drop()].
     #[cfg(feature = "loaded")]
     #[cfg_attr(docsrs, doc(cfg(feature = "loaded")))]
-    pub unsafe fn load_from(path: impl AsRef<std::ffi::OsStr>) -> Result<Self, LoadingError> {
+    pub unsafe fn load_from(
+        path: impl AsRef<str> + libloading::AsFilename,
+    ) -> Result<Self, LoadingError> {
         let lib = Library::new(path)
             .map_err(LoadingError::LibraryLoadFailure)
             .map(alloc::sync::Arc::new)?;
